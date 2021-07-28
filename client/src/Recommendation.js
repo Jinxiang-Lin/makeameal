@@ -18,6 +18,7 @@ function Recommendation(props){
     
     
     return(
+        /*
         <div>
         <h3>Our Recommendation:</h3>
         {recommendation.map( val => {
@@ -30,6 +31,31 @@ function Recommendation(props){
                 </ul>
                 
             )
+        })}
+        </div>
+        */
+       <div>
+        <h1>Our recommendation</h1>
+       {recommendation.map((val)=>{
+            return(
+                <div key = {val.id}>
+                    <div className="card">
+                        <div className="header">
+                                <div className="icon">
+                                    <a href="#"><i className="fa fa-heart-o"></i></a>
+                                </div>
+                        </div>
+                        <div className="text">
+                            <h2 className="food">{val.title}</h2>
+                                <i className="fa fa-clock-o">15 Mins</i>
+                                <i className="fa fa-users">Serves 2</i>
+                                <p className="info-1"><em>You will need: </em>{val.ingredients}</p>
+                                <p className="info-2"><em>Directions: </em>{val.directions}</p>
+                                <p className="info-2"><em>Ingredients: </em>{val.ingredients_string}</p>
+                        </div>
+                    </div>                   
+                </div>
+                )
         })}
         </div>
     )
