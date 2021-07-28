@@ -25,14 +25,14 @@ class Search extends React.Component{
     handleSubmit(event){
         event.preventDefault()
         const inputedIngredients = []
-        if(this.state.firstIngredient !== ""){ inputedIngredients.push(this.state.firstIngredient) }
-        if(this.state.secondIngredient !== ""){ inputedIngredients.push(this.state.secondIngredient) }
-        if(this.state.thirdIngredient !== ""){ inputedIngredients.push(this.state.thirdIngredient) }
-        if(this.state.fourthIngredient !== ""){ inputedIngredients.push(this.state.fourthIngredient) }
-        if(this.state.fifthIngredient !== ""){ inputedIngredients.push(this.state.fifthIngredient) }
-        if(this.state.sixthIngredient !== ""){ inputedIngredients.push(this.state.sixthIngredient) }
-        if(this.state.seventhIngredient !== ""){ inputedIngredients.push(this.state.seventhIngredient) }
-        if(this.state.eighthIngredient !== ""){ inputedIngredients.push(this.state.eighthIngredient) }
+        if(this.state.firstIngredient !== ""){ inputedIngredients.push(this.state.firstIngredient.toLocaleLowerCase()) }
+        if(this.state.secondIngredient !== ""){ inputedIngredients.push(this.state.secondIngredient.toLocaleLowerCase()) }
+        if(this.state.thirdIngredient !== ""){ inputedIngredients.push(this.state.thirdIngredient.toLocaleLowerCase()) }
+        if(this.state.fourthIngredient !== ""){ inputedIngredients.push(this.state.fourthIngredient.toLocaleLowerCase()) }
+        if(this.state.fifthIngredient !== ""){ inputedIngredients.push(this.state.fifthIngredient.toLocaleLowerCase()) }
+        if(this.state.sixthIngredient !== ""){ inputedIngredients.push(this.state.sixthIngredient.toLocaleLowerCase()) }
+        if(this.state.seventhIngredient !== ""){ inputedIngredients.push(this.state.seventhIngredient.toLocaleLowerCase()) }
+        if(this.state.eighthIngredient !== ""){ inputedIngredients.push(this.state.eighthIngredient.toLocaleLowerCase()) }
         
         console.log(inputedIngredients.length)
         this.setState({ inputCount: inputedIngredients.length})
@@ -68,7 +68,7 @@ class Search extends React.Component{
         
         return(
             <div>
-            <h2>Please enter ingredients of your choice</h2>
+            <h3>Please enter ingredients of your choice</h3>
             <form onSubmit={this.handleSubmit}>
                 <input 
                     placeholder="1..."
@@ -130,32 +130,32 @@ class Search extends React.Component{
                 <button>button</button>
             </form>
             
-            <h2> Entered Ingredient list: </h2>
+            
             <div>
-                <span>
+                
+                <h3>Your ingredients</h3>
+                <p>
                 {this.state.firstIngredient}
-                
+                {' '}
                 {this.state.secondIngredient}
-                
+                {' '}
                 {this.state.thirdIngredient}
-                
+                {' '}
                 {this.state.fourthIngredient}
-                
+                {' '}
                 {this.state.fifthIngredient}
-                
+                {' '}
                 {this.state.sixthIngredient}
-                
+                {' '}
                 {this.state.seventhIngredient}
-                
+                {' '}
                 {this.state.eighthIngredient}
-                </span>
+                </p>
             </div>
             <div>
-                <h2>Your Recipes: </h2>
                 <Results recipes={this.state.recipes} count={this.state.inputCount}/>
             </div>
             <div>
-                <h2>Our Recommendation:</h2>
                 <Recommendation recipes={this.state.recipes} count={this.state.inputCount}/>
             </div>
             </div>

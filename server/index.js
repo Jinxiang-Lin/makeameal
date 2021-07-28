@@ -25,7 +25,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
 
- connection.query('SELECT * FROM full_dataset WHERE ingredient_count = 8 ', function (err, rows, fields) {
+ connection.query('SELECT * FROM full_dataset WHERE ingredient_count = 30 ', function (err, rows, fields) {
      if (err) throw err
     
      console.log('Rows ', rows)
@@ -43,7 +43,7 @@ app.post('/api/post', (req, res) => {
     //console.log(req.body.inputIngredients)
     
     const strArr = req.body.inputIngredients;
-    console.log(strArr.length)
+    console.log(strArr)
     let newStr ="";
     for(let i = 0; i < strArr.length; i++){
         if(i != strArr.length - 1){

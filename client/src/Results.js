@@ -16,7 +16,9 @@ function Results(props){
 
     
     return(
-        exactCount.map( val => {
+        <div>
+        <h3>Your Recipes: </h3>
+        {exactCount.map( val => {
             return(
                 <ul key={val.id}>
                     <li>{val.title}</li>
@@ -26,7 +28,8 @@ function Results(props){
                 </ul>
                 
             )
-        })
+        })}
+        </div>
     )
 }
 

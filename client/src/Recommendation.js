@@ -18,7 +18,9 @@ function Recommendation(props){
     
     
     return(
-        recommendation.map( val => {
+        <div>
+        <h3>Our Recommendation:</h3>
+        {recommendation.map( val => {
             return(
                 <ul key={val.id}>
                     <li>{val.title}</li>
@@ -28,7 +30,8 @@ function Recommendation(props){
                 </ul>
                 
             )
-        })
+        })}
+        </div>
     )
 }
 
