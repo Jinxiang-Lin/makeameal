@@ -21,7 +21,15 @@ h1  {
   text-shadow: 2px 2px 2px #fff;
 }
 
+h2{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(235, 228, 228);
+}
+
 h3{
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: rgb(235, 228, 228);
 }
 
@@ -32,7 +40,8 @@ h3{
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  border: 3px solid #555d87
+  border: 3px solid #555d87;
+  padding: 40px;
 }
 
 .hero.text  {
@@ -40,6 +49,7 @@ h3{
   position: absolute;
   top: 50%;
   left: 50%;
+  
   transform: translate(-50%, -50%);
   color: white;
 }

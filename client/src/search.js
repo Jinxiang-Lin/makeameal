@@ -71,7 +71,7 @@ class Search extends React.Component{
             
             <form className = "input-form" onSubmit={this.handleSubmit}>
             <div className = "input-container">
-            <h3 className = "input-title">Please enter ingredients of your choice</h3>
+            <h2 className = "input-title">Please enter ingredients of your choice</h2>
                 <input 
                     placeholder="1..."
                     type="text"
@@ -134,7 +134,7 @@ class Search extends React.Component{
             </form>
             <div className="result-your-entered">
                 
-                <h3>Your ingredients</h3>
+                <h2>Your ingredients</h2>
                 <p>
                 {this.state.firstIngredient}
                 {' '}
