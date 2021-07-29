@@ -68,8 +68,10 @@ class Search extends React.Component{
         
         return(
             <div>
-            <h3>Please enter ingredients of your choice</h3>
-            <form onSubmit={this.handleSubmit}>
+            
+            <form className = "input-form" onSubmit={this.handleSubmit}>
+            <div className = "input-container">
+            <h3 className = "input-title">Please enter ingredients of your choice</h3>
                 <input 
                     placeholder="1..."
                     type="text"
@@ -126,12 +128,11 @@ class Search extends React.Component{
                     value={this.state.eighthIngredient}
                     onChange={this.handleChange}
                 />
-                <br />
-                <button>button</button>
+                <button className = "input-button">Submit</button>
+                </div>
+                
             </form>
-            
-            
-            <div>
+            <div className="result-your-entered">
                 
                 <h3>Your ingredients</h3>
                 <p>
@@ -152,14 +153,16 @@ class Search extends React.Component{
                 {this.state.eighthIngredient}
                 </p>
             </div>
-            <div>
+            <div className="result-recipes">
+           
+            <div className="result-exact">
                 <Results recipes={this.state.recipes} count={this.state.inputCount}/>
             </div>
-            <div>
+            <div className="result-recommendation">
                 <Recommendation recipes={this.state.recipes} count={this.state.inputCount}/>
             </div>
             </div>
-
+            </div>
         )
     }
 }

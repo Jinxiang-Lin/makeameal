@@ -56,41 +56,8 @@ form.search_form input[type=text]{
   width: 80%;
   background: #f1f1f1;
 }
-form.search_form button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
-form.search_form button:hover {
-  background: #0b7dda;
-}
 
-/* Clear floats */
-form.search_form::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
-/* search bar end here*/
 
-/* result list start here*/
-.result-list-container ul{
-  text-align: justify;
-  list-style-type: none;
-  border: 1px solid black;
-  padding: 10px;
-  background: #cacee6;
-}
 
-.result-list-container li:first-child{
-  text-align: center;
-  
-}
-/* result list end here*/
+

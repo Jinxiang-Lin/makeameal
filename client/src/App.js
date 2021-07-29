@@ -1,5 +1,6 @@
 import './App.css';
 import './search.css'
+import './ingredientsInput.css'
 import Search from './Search';
 
 

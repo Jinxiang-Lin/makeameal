@@ -44,6 +44,7 @@ app.post('/api/post', (req, res) => {
     
     const strArr = req.body.inputIngredients;
     console.log(strArr)
+    if(strArr.length !== 0){
     let newStr ="";
     for(let i = 0; i < strArr.length; i++){
         if(i != strArr.length - 1){
@@ -63,6 +64,7 @@ app.post('/api/post', (req, res) => {
         console.log(rows)
         res.send(JSON.stringify(rows))
     })
+    }
 
     // const ingredientName = req.body.ingredientName;
     // console.log(ingredientName)

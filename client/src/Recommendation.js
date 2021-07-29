@@ -35,7 +35,7 @@ function Recommendation(props){
         </div>
         */
        <div>
-        <h1>Our recommendation</h1>
+        <h1>Our recommendations</h1>
        {recommendation.map((val)=>{
             return(
                 <div key = {val.id}>
