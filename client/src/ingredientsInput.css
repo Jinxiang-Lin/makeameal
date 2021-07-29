@@ -31,3 +31,9 @@ button:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.result-your-entered{
+    border: 1px solid white;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}

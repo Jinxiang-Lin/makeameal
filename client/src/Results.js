@@ -13,7 +13,7 @@ function Results(props){
             recommendation.push(allRecipes[i])
         }
     }
-
+    //console.log(props)
     
     return(
         /*
@@ -33,7 +33,7 @@ function Results(props){
         </div>
         */
        <div>
-       <h1>Your recipes</h1>
+       {props.doesRecipesGet? <h1>Your recipes</h1> : null}
        {exactCount.map((val)=>{
             return(
                 <div key = {val.id}>

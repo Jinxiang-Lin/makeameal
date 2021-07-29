@@ -15,7 +15,8 @@ class Search extends React.Component{
             seventhIngredient: "",
             eighthIngredient: "",
             recipes: [],
-            inputCount: 0
+            inputCount: 0,
+            doesRecipesGet: false
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -50,7 +51,8 @@ class Search extends React.Component{
         .then(response => response.json())
         .then(response => {
            this.setState({
-               recipes: response
+               recipes: response,
+               doesRecipesGet: true
            })
         })
         
@@ -156,10 +158,10 @@ class Search extends React.Component{
             <div className="result-recipes">
            
             <div className="result-exact">
-                <Results recipes={this.state.recipes} count={this.state.inputCount}/>
+                <Results recipes={this.state.recipes} count={this.state.inputCount} doesRecipesGet={this.state.doesRecipesGet}/>
             </div>
             <div className="result-recommendation">
-                <Recommendation recipes={this.state.recipes} count={this.state.inputCount}/>
+                <Recommendation recipes={this.state.recipes} count={this.state.inputCount} doesRecipesGet={this.state.doesRecipesGet}/>
             </div>
             </div>
             </div>
