@@ -34,10 +34,10 @@ class Search extends React.Component{
         if(this.state.sixthIngredient !== ""){ inputedIngredients.push(this.state.sixthIngredient.toLocaleLowerCase()) }
         if(this.state.seventhIngredient !== ""){ inputedIngredients.push(this.state.seventhIngredient.toLocaleLowerCase()) }
         if(this.state.eighthIngredient !== ""){ inputedIngredients.push(this.state.eighthIngredient.toLocaleLowerCase()) }
-        
+        //http://localhost:3001/api/post
         console.log(inputedIngredients.length)
         this.setState({ inputCount: inputedIngredients.length})
-        fetch("http://localhost:3001/api/post", {
+        fetch("https://make-a-meal123.herokuapp.com/api/post", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
