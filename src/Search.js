@@ -37,7 +37,7 @@ class Search extends React.Component{
         //http://localhost:3001/api/post
         console.log(inputedIngredients.length)
         this.setState({ inputCount: inputedIngredients.length})
-        fetch("https://make-a-meal123.herokuapp.com/api/post", {
+        fetch("https://make-a-meal-server.herokuapp.com/api/post", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
