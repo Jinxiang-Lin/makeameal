@@ -55,9 +55,7 @@ h3{
 }
 
 /* search bar start here*/
-* {
-  box-sizing: border-box;
-}
+
 form.search_form input[type=text]{
   padding: 10px;
   font-size: 17px;
