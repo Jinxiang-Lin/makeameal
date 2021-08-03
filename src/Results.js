@@ -33,7 +33,7 @@ function Results(props){
         </div>
         */
        <div>
-       {props.doesRecipesGet? <h1>Your recipes</h1> : null}
+       {props.doesRecipesGet? <h1>Recipes with exact ingredients</h1> : null}
        {exactCount.map((val)=>{
             return(
                 <div key = {val.id}>
